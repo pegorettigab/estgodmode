@@ -20,13 +20,11 @@ header .container {
     align-items: center;
     justify-content: space-between;
     height: 64px;
-    
 }
 
 header .info-header {
     display: flex;
     align-items: center;
-    gap: 12px;
 }
 
 header .acessibilidade {
@@ -54,10 +52,18 @@ header .acessibilidade {
     transform: rotate(90deg);
 }
 
+.content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    gap: 16px;
+}
+
 .prova {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    width: 100%;
 }
 
 .questao {
@@ -191,4 +197,179 @@ color: rgb(18, 18, 18);
 .questao .godmode #resultado {
     font-size: 10px;
     color: #696969;
+}
+
+.info-prova {
+    display: grid;
+    border-radius: 7px;
+    background-color: #FFFFFF;
+    padding: 16px 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 8px 0px;
+    position: sticky;
+    max-width: 282px;
+    display: block;
+    top: 94px;
+}
+
+.info-prova .timer {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px; 
+    color: #A3A3A3;
+    background-color: #F5F5F5;
+    row-gap: 8px;
+}
+
+.info-prova .timer .tempo div {
+    width: 30px;
+}
+
+.info-prova .timer .tempo div span:first-of-type {
+    font-size: 1.6rem;
+}
+
+.info-prova .timer .tempo div span:last-of-type {
+    font-size: 14px;
+}
+
+.info-prova .timer .tempo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.info-prova .timer .exibir {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    color: #424242;
+    font-size: 14px;
+}
+
+.info-prova .timer .barra-progresso {
+    appearance: none;
+    border-color: transparent;
+    border-radius: 500px;
+    overflow: hidden;
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0.16);
+    height: 4px;
+    grid-column: 1/-1;
+}
+
+.info-prova .questoes-progresso {
+    padding: 0px 16px 0px 16px;
+}
+
+.info-prova .questoes-progresso .atual {
+    font-size: 16px;
+    font-weight: 450;
+    color: #424242;
+}
+
+.info-prova .questoes-progresso .atual span {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.info-prova .questoes-progresso .numeracao-questoes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    padding-bottom: 16px;
+}
+
+.info-prova .questoes-progresso .numeracao-questoes span {
+    border: 1px solid rgb(224, 224, 224);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 8px;
+    position: relative;
+    isolation: isolate;
+    padding: 0px;
+    margin: 0px;
+    width: 42px;
+    height: 42px;
+    background-color: rgb(245, 245, 245);
+}
+
+.info-prova .questoes-progresso .resolvidas {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: #424242;
+}
+
+.info-prova .questoes-progresso .resolvidas .dot {
+    width: 8px;
+    height: 8px;
+    aspect-ratio: 1 / 1;
+    margin-right: 4px;
+    border-radius: 50%;
+    border: 1px solid rgb(163, 163, 163);
+    line-height: 1;
+    background-color: rgb(224, 224, 224);
+}
+
+.info-prova .questoes-progresso .resolvidas .em-branco {
+    font-weight: 700;
+}
+
+.info-prova .questoes-progresso .linha-separadora {
+    display: block;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    transform: rotate(0deg);
+    padding-top: 16px;
+}
+
+.info-prova .questoes-progresso button {
+    background-color: #144BC8;
+    border: none;
+    color: #FFFFFF;
+    pointer-events: none;
+    height: 48px;
+    width: 100%;
+    border-radius: 7px;
+    outline: none;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    margin-top: 16px;
+    font-weight: 500;
+}
+
+.feedback {
+    display: flex;
+    gap: 8px;
+    align-self: center;
+    padding-left: 20px;
+    padding-top: 8px;
+    position: sticky;
+    background: rgb(50, 79, 190) !important;
+    left: 40px;
+    color: #FFFFFF;
+    bottom: -12px;
+    width: 120px;
+    height: 38px;
+    font-family: "Arial";
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.libras {
+    position: absolute;
+    left: initial;
+    right: 20px;
+    top: 50%;
+    bottom: initial;
+    transform: translateY(calc(-50% - 10px));
 }
