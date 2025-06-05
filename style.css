@@ -1,0 +1,185 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0 auto;
+    background-color: #F7F7F7;
+}
+
+header {
+    margin-bottom: 32px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 8px;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    
+}
+
+header .info-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header .acessibilidade {
+    display: flex;
+    gap: 40px;
+}
+
+.tipo-exercicio {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #121212;
+}
+
+.materia {
+    font-weight: 500;
+    color: #424242;
+}
+
+.barrinha {
+    display: block;
+    width: 48px;
+    height: 1px;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    transform: rotate(90deg);
+}
+
+.prova {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.questao {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 8px 0px;
+    border-radius: 7px;
+    padding: 1.5rem;
+    background-color: #FFFFFF;
+    width: 864px;
+}
+
+.questao .info-questao {
+    display: flex;
+    justify-content: space-between;
+}
+
+.questao .info-questao .numero-questao {
+    height: 32px;
+    width: 32px;
+    font-size: 14px;
+    color: #121212;
+    border: 1px solid rgb(224, 224, 224);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 8px;
+    position: relative;
+    isolation: isolate;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(245, 245, 245);
+}
+
+.questao .info-questao .revisao {
+color: rgb(18, 18, 18);
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 100%;
+    border-radius: 500px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: 2px solid rgb(18, 18, 18);
+    margin-left: 7px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 32px;
+    cursor: pointer;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+}
+
+.questao .pergunta {
+    color: #696969;
+    line-height: 1.4rem;
+}
+
+.questao .respostas {
+    color: #696969;
+}
+
+.questao .respostas .resposta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 1px solid rgb(224, 224, 224);
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    padding: .75rem;
+}
+
+.questao .respostas .resposta .alternativa-letra {
+    border-radius: 50%;
+    min-width: 32px;
+    min-height: 32px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border: 1px solid rgb(224, 224, 224);
+    user-select: none;
+    background-color: rgb(245, 245, 245);
+}
+
+.questao .godmode {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.questao .godmode input,
+.questao .godmode textarea,
+.questao .godmode button {
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #696969;
+}
+
+.questao .godmode button {
+    font-size: 10px;
+}
+
+.questao .godmode button:hover {
+    font-weight: 600;
+}
+
+.questao .godmode #resultado {
+    font-size: 10px;
+    color: #696969;
+}
