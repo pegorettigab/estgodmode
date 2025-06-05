@@ -171,6 +171,7 @@ color: rgb(18, 18, 18);
 .questao .godmode button {
     font-size: 1rem;
     border: 1px solid #fcfcfc;
+    color: #dbdbdb !important;
     border-radius: 7px;
     outline: none;
     background-color: transparent;
