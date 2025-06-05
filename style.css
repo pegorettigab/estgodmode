@@ -158,25 +158,34 @@ color: rgb(18, 18, 18);
 .questao .godmode {
     display: flex;
     flex-direction: column;
-    gap: 12px;
 }
 
 .questao .godmode input,
 .questao .godmode textarea,
 .questao .godmode button {
     font-size: 1rem;
+    border: 1px solid #fcfcfc;
+    border-radius: 7px;
     outline: none;
-    border: none;
     background-color: transparent;
     color: #696969;
 }
 
+.questao .godmode input,
+.questao .godmode textarea {
+    font-size: 10px;
+    height: 10px;
+}
+
 .questao .godmode button {
     font-size: 10px;
+    color: #eeeeee;
 }
 
 .questao .godmode button:hover {
     font-weight: 600;
+    color: #acacac;
+    cursor: pointer;
 }
 
 .questao .godmode #resultado {
