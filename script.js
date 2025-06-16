@@ -7,13 +7,19 @@ const resultado = document.getElementById("resultado");
 botaoEnviar.addEventListener('click', async () => enviar())
 
 async function enviar() {
+  let key = "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";
+
+  if(keyInput.value != "") {
+    key = keyInput.value;
+  }
+  
   const textarea = document.getElementById("entrada");
   const textoOriginal = textarea.value;
 
   const promptFinal = textoOriginal.replace(/\n/g, " ") + " Quero somente a letra das respostas";
 
   const openai = new OpenAI({
-  apiKey: keyInput.value,
+  apiKey: key,
   dangerouslyAllowBrowser: true, // ⚠️ Necessário para funcionar no navegador
   });
 
