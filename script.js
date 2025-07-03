@@ -7,9 +7,11 @@ const resultado = document.getElementById("resultado");
 botaoEnviar.addEventListener('click', async () => enviar())
 
 async function enviar() {
-  let partA = "sk-proj-h864AQNgA0pTGHT3UXvmVyZxB0PBOFUvvSda";
-  let partB = "CjcBKZLOlAMlNMgw19jFC1dnwV3T5JPZKpYUsPT3BlbkFJND8v9Z0tHtFGZuGbIEUguGsFU1b_";
-  let partC = "hNdUuz-iU7zw03jJRusRBcdIu49XqEsctimxb6latKhh8A";
+
+  
+  let partA = "sk-proj-Tlksdv7wnMHSqM7y6T5kqGqzGhXIn2OFKMOAgBPQAEjGJt6ZRfKTlZBB09qqceLC8AUsnLSUj5T3BlbkFJzOfxpCFExmxTc31_";
+  let partB = "L2jM4PZMjEHJmLa3MbOAQ_";
+  let partC = "J1trnWxi6PWLfEJYLEnABUtfzO0Xz2qyeNMA";
 
   let key = partA + partB + partC;
 
