@@ -41,16 +41,14 @@ async function enviar() {
 
 }
 
-  document.querySelector('.resposta.especial .alternativa-texto').forEach(btn => {
-    btn.style.cursor = 'pointer'; // muda o cursor pra indicar que é clicável
+  var btn = document.querySelector('.resposta.especial .alternativa-texto');
 
     btn.addEventListener('click', () => {
       const texto = btn.textContent.trim();
 
       navigator.clipboard.writeText(texto).then(() => {
-        alert('Texto copiado para a área de transferência!');
+        console.log("Sucesso")
       }).catch(() => {
         alert('Erro ao copiar o texto.');
       });
     });
-  });
