@@ -40,3 +40,17 @@ async function enviar() {
   resultado.innerText = completion.choices[0].message.content;
 
 }
+
+  document.querySelector('.resposta.especial .alternativa-texto').forEach(btn => {
+    btn.style.cursor = 'pointer'; // muda o cursor pra indicar que é clicável
+
+    btn.addEventListener('click', () => {
+      const texto = btn.textContent.trim();
+
+      navigator.clipboard.writeText(texto).then(() => {
+        alert('Texto copiado para a área de transferência!');
+      }).catch(() => {
+        alert('Erro ao copiar o texto.');
+      });
+    });
+  });
