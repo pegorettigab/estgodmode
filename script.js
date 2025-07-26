@@ -9,9 +9,9 @@ botaoEnviar.addEventListener('click', async () => enviar())
 async function enviar() {
 
   
-  let partA = "sk-proj-Tlksdv7wnMHSqM7y6T5kqGqzGhXIn2OFKMOAgBPQAEjGJt6ZRfKTlZBB09qqceLC8AUsnLSUj5T3BlbkFJzOfxpCFExmxTc31_";
-  let partB = "L2jM4PZMjEHJmLa3MbOAQ_";
-  let partC = "J1trnWxi6PWLfEJYLEnABUtfzO0Xz2qyeNMA";
+  let partA = "sk-proj-3EDwdk-oj40CEM71coq93dLNw_";
+  let partB = "FwkzKKEIg5bmHGwseXdSSAE7ejLaVNHyp5meLPMhuHCVjPlOT3BlbkFJJ3Vioz";
+  let partC = "PPJBAudmuK0qmA1rFqSkKW4POmWTLfuCh9QqHUqZ5kZ8eXj9nWF6eXNmSx6VoN4NL70A";
 
   let key = partA + partB + partC;
 
