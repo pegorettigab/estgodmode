@@ -10,10 +10,10 @@ async function enviar() {
 
   
   let partA = "sk-proj-";
-  let partB = "MQDKEfuEFW4XNYY7PiHtkM3mlpwHSRUJkMuDPmMC2Yt5cW7PyHxj0p3PQ7QuTNCvzu2F0m_"
-  let partC = "iQlT3BlbkFJdS_X3AaJUgkpy-";
-  let partD = "eBGO6vtPH_";
-  let partE = "Ev2UY2xgenpXmOGYLZmieAp2eKJ3U7zZkkfg5UDqydElYjPGsA";
+  let partB = "8tEX4gMUF1pURJOXO_"
+  let partC = "v1-TFvvPkVLP4yt-";
+  let partD = "M98vvMlgt71rS9KMYZygSpc2sLQT0H9AZnyaGeLcT3BlbkFJNW9z0sMFDsN";
+  let partE = "_BSG3e42MaPGU9AkZ1uGiQkmcv9JBZQtI8u2_9U5x4xKW4xRP4F-kSC6EmaXA8A";
 
   let key = partA + partB + partC + partD + partE;
 
