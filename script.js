@@ -1,56 +1,63 @@
-import OpenAI from "https://cdn.skypack.dev/openai";
+// 1. Importar a SDK do Google Generative AI via CDN compatível com navegador
+import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
 
 const keyInput = document.getElementById("key");
 const botaoEnviar = document.getElementById("enviar");
 const resultado = document.getElementById("resultado");
+const textarea = document.getElementById("entrada");
 
-botaoEnviar.addEventListener('click', async () => enviar())
+botaoEnviar.addEventListener('click', async () => enviar());
 
 async function enviar() {
-
   
-  let partA = "sk-proj--";
-  let partB = "KmKZFV7qvxXuh3u-"
-  let partC = "O8N3iXOlgMdZD-";
-  let partD = "bSND7HXKmFLDjHag0s6Xn4JtZ2T4vF88HFaevvrTTvwT3BlbkFJRmvIcfLuVHwH5pbJADcf";
-  let partE = "D5UYSktmht9YiNF3ycuzBLajg5Hd_3rYbqIZmxctUr5OrpGrzqm_AA";
 
-  let key = partA + partB + partC + partD + partE;
+  let key = "AIzaSyBWUSU1BSZ4eP55_dG9mVnNkFBc4EmsAFw"; 
 
+  // Prioriza o input do usuário se houver algo digitado
   if(keyInput.value != "") {
-    console.log('oi')
     key = keyInput.value;
   }
   
-  const textarea = document.getElementById("entrada");
-  const textoOriginal = textarea.value;
+  if (!key || key === "SUA_CHAVE_GEMINI_AQUI_SE_QUISER_FIXAR") {
+      alert("Por favor, insira uma API Key do Google Gemini válida.");
+      return;
+  }
 
+  const textoOriginal = textarea.value;
   const promptFinal = textoOriginal.replace(/\n/g, " ") + " Quero somente a letra das respostas";
 
-  const openai = new OpenAI({
-  apiKey: key,
-  dangerouslyAllowBrowser: true, // ⚠️ Necessário para funcionar no navegador
-  });
+  try {
+    resultado.innerText = "Carregando...";
 
-  const completion = await openai.chat.completions.create({
-    model: "gpt-5-nano",
-    messages: [
-      { role: "user", content: promptFinal }
-    ]
-  });
+    // 2. Inicializar a instância do Google Generative AI
+    const genAI = new GoogleGenerativeAI(key);
 
-  resultado.innerText = completion.choices[0].message.content;
+    // 3. Escolher o modelo (gemini-1.5-flash é rápido e barato/gratuito)
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
+    // 4. Gerar o conteúdo
+    const result = await model.generateContent(promptFinal);
+    const response = await result.response;
+    const text = response.text();
+
+    // Exibir o resultado
+    resultado.innerText = text;
+
+  } catch (error) {
+    console.error("Erro ao comunicar com o Gemini:", error);
+    resultado.innerText = "Erro: " + error.message;
+  }
 }
 
-  var btn = document.querySelector('.resposta.especial .alternativa-texto');
-
+// Lógica do botão de copiar (mantida igual)
+var btn = document.querySelector('.resposta.especial .alternativa-texto');
+if (btn) { // Verificação de segurança caso o elemento não exista
     btn.addEventListener('click', () => {
       const texto = btn.textContent.trim();
-
       navigator.clipboard.writeText(texto).then(() => {
-        console.log("Sucesso")
+        console.log("Sucesso");
       }).catch(() => {
         alert('Erro ao copiar o texto.');
       });
     });
+}
