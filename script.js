@@ -9,11 +9,11 @@ botaoEnviar.addEventListener('click', async () => enviar())
 async function enviar() {
 
   
-  let partA = "sk-proj-";
-  let partB = "8tEX4gMUF1pURJOXO_"
-  let partC = "v1-TFvvPkVLP4yt-";
-  let partD = "M98vvMlgt71rS9KMYZygSpc2sLQT0H9AZnyaGeLcT3BlbkFJNW9z0sMFDsN";
-  let partE = "_BSG3e42MaPGU9AkZ1uGiQkmcv9JBZQtI8u2_9U5x4xKW4xRP4F-kSC6EmaXA8A";
+  let partA = "sk-proj--";
+  let partB = "KmKZFV7qvxXuh3u-"
+  let partC = "O8N3iXOlgMdZD-";
+  let partD = "bSND7HXKmFLDjHag0s6Xn4JtZ2T4vF88HFaevvrTTvwT3BlbkFJRmvIcfLuVHwH5pbJADcf";
+  let partE = "D5UYSktmht9YiNF3ycuzBLajg5Hd_3rYbqIZmxctUr5OrpGrzqm_AA";
 
   let key = partA + partB + partC + partD + partE;
 
@@ -33,7 +33,7 @@ async function enviar() {
   });
 
   const completion = await openai.chat.completions.create({
-    model: "gpt-4o-mini",
+    model: "gpt-5-nano",
     messages: [
       { role: "user", content: promptFinal }
     ]
