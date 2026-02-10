@@ -33,7 +33,7 @@ async function enviar() {
     const genAI = new GoogleGenerativeAI(key);
 
     // 3. Escolher o modelo (gemini-1.5-flash é rápido e barato/gratuito)
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-3-flash-preview" });
 
     // 4. Gerar o conteúdo
     const result = await model.generateContent(promptFinal);
